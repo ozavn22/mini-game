@@ -1,0 +1,156 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --muted: #94a3b8;
+  --text: #e2e8f0;
+  --accent: #22c55e;
+  --accent2: #3b82f6;
+  --danger: #ef4444;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(160deg, #0b1022, #0f172a 45%, #0b1228);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.card {
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.stats div {
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.stats span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.stats strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  gap: 8px;
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background: #1f2937;
+  color: var(--text);
+  padding: 12px 10px;
+  font-size: 1rem;
+  min-height: 46px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.op-btn.selected {
+  outline: 2px solid var(--accent2);
+  background: #172554;
+}
+
+.num-btn.used {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#newGameBtn {
+  background: var(--accent2);
+}
+#undoBtn {
+  background: #334155;
+}
+#resetBtn {
+  background: #475569;
+}
+
+.log ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.log li {
+  margin: 4px 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.result {
+  display: none;
+}
+.result.show {
+  display: block;
+}
+.result.win {
+  border-color: #14532d;
+  background: #052e16;
+}
+.result.lose {
+  border-color: #7f1d1d;
+  background: #450a0a;
+}
+
+#ruleText {
+  margin: 0;
+  color: #cbd5e1;
+}

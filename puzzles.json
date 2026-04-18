@@ -1,0 +1,52 @@
+[
+  {
+    "id": "E-01",
+    "difficulty": "easy",
+    "start": 4,
+    "target": 20,
+    "maxMoves": 1,
+    "numbers": [5, 2, 3],
+    "ops": ["+", "-", "*"],
+    "rules": { "noRepeatOp": false, "consumeNumbers": true, "mustUse": [] }
+  },
+  {
+    "id": "M-01",
+    "difficulty": "medium",
+    "start": 3,
+    "target": 16,
+    "maxMoves": 2,
+    "numbers": [5, 2, 4],
+    "ops": ["+", "-", "*", "/"],
+    "rules": { "noRepeatOp": true, "consumeNumbers": true, "mustUse": [5] }
+  },
+  {
+    "id": "M-04",
+    "difficulty": "medium",
+    "start": 16,
+    "target": 10,
+    "maxMoves": 2,
+    "numbers": [2, 3, 4],
+    "ops": ["+", "-", "*", "/"],
+    "rules": { "noRepeatOp": true, "consumeNumbers": true, "mustUse": [] }
+  },
+  {
+    "id": "H-01",
+    "difficulty": "hard",
+    "start": 7,
+    "target": 36,
+    "maxMoves": 3,
+    "numbers": [5, 3, 2, 4],
+    "ops": ["+", "-", "*", "/"],
+    "rules": { "noRepeatOp": true, "consumeNumbers": true, "mustUse": [5, 2] }
+  },
+  {
+    "id": "H-02",
+    "difficulty": "hard",
+    "start": 12,
+    "target": 47,
+    "maxMoves": 3,
+    "numbers": [4, 3, 2, 5],
+    "ops": ["+", "-", "*", "/"],
+    "rules": { "noRepeatOp": true, "consumeNumbers": true, "mustUse": [4, 3] }
+  }
+]

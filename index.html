@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayı Akışı</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top">
+        <h1>Sayı Akışı</h1>
+        <button id="newGameBtn">Yeni Oyun</button>
+      </header>
+
+      <section class="card stats">
+        <div><span>Hedef</span><strong id="target">-</strong></div>
+        <div><span>Mevcut</span><strong id="current">-</strong></div>
+        <div><span>Kalan Hamle</span><strong id="movesLeft">-</strong></div>
+      </section>
+
+      <section class="card">
+        <h2>İşlem Seç</h2>
+        <div id="ops" class="grid grid-4"></div>
+      </section>
+
+      <section class="card">
+        <h2>Sayı Seç</h2>
+        <div id="numbers" class="grid grid-4"></div>
+      </section>
+
+      <section class="card">
+        <h2>Kural</h2>
+        <p id="ruleText">-</p>
+      </section>
+
+      <section class="card log">
+        <h2>Hamle Geçmişi</h2>
+        <ul id="history"></ul>
+      </section>
+
+      <section class="actions">
+        <button id="undoBtn">Geri Al</button>
+        <button id="resetBtn">Sıfırla</button>
+      </section>
+
+      <section class="card result" id="resultBox">
+        <h2 id="resultTitle">Durum</h2>
+        <p id="resultDesc"></p>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
