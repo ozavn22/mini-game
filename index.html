@@ -10,46 +10,99 @@
     <div class="app">
       <header class="top">
         <h1>Sayı Akışı</h1>
-        <button id="newGameBtn">Yeni Oyun</button>
+        <p class="subtitle">Firebase lobby sürümü</p>
       </header>
 
-      <section class="card stats">
-        <div><span>Hedef</span><strong id="target">-</strong></div>
-        <div><span>Mevcut</span><strong id="current">-</strong></div>
-        <div><span>Kalan Hamle</span><strong id="movesLeft">-</strong></div>
+      <section class="card setup-card">
+        <h2>Oyuncu ve Oda</h2>
+        <label class="field-label" for="playerNameInput">Oyuncu Adı</label>
+        <input id="playerNameInput" type="text" maxlength="18" placeholder="Adını yaz" autocomplete="off" />
+
+        <div class="setup-actions">
+          <button id="createRoomBtn">Oda Oluştur</button>
+        </div>
+
+        <div class="join-row">
+          <input id="joinRoomInput" type="text" maxlength="6" placeholder="Oda kodu" autocomplete="off" />
+          <button id="joinRoomBtn">Odaya Katıl</button>
+        </div>
+
+        <p id="setupMessage" class="muted-text">
+          Oda oluşturan kişi linki paylaşır. Herkes aynı lobiye girer, hazır olur ve aynı bölümü oynar.
+        </p>
       </section>
 
-      <section class="card">
-        <h2>İşlem Seç</h2>
-        <div id="ops" class="grid grid-4"></div>
+      <section class="card room-card hidden" id="roomCard">
+        <div class="room-head">
+          <div>
+            <h2>Lobby</h2>
+            <p id="roomStatusText" class="muted-text">-</p>
+          </div>
+          <div class="room-code-box">
+            <span>Oda Kodu</span>
+            <strong id="roomCodeText">-</strong>
+          </div>
+        </div>
+
+        <div class="room-actions">
+          <button id="copyInviteBtn">Davet Linki</button>
+          <button id="readyBtn">Hazırım</button>
+          <button id="startBtn">Oyunu Başlat</button>
+          <button id="leaveRoomBtn">Odadan Çık</button>
+        </div>
+
+        <div class="lobby-grid">
+          <div class="subcard">
+            <h3>Oyuncular</h3>
+            <ul id="playersList" class="players-list"></ul>
+          </div>
+
+          <div class="subcard">
+            <h3>Sıralama</h3>
+            <ol id="leaderboardList" class="leaderboard-list"></ol>
+          </div>
+        </div>
       </section>
 
-      <section class="card">
-        <h2>Sayı Seç</h2>
-        <div id="numbers" class="grid grid-4"></div>
-      </section>
+      <section id="gameArea" class="hidden">
+        <section class="card stats">
+          <div><span>Hedef</span><strong id="target">-</strong></div>
+          <div><span>Mevcut</span><strong id="current">-</strong></div>
+          <div><span>Kalan Hamle</span><strong id="movesLeft">-</strong></div>
+        </section>
 
-      <section class="card">
-        <h2>Kural</h2>
-        <p id="ruleText">-</p>
-      </section>
+        <section class="card">
+          <h2>İşlem Seç</h2>
+          <div id="ops" class="grid grid-4"></div>
+        </section>
 
-      <section class="card log">
-        <h2>Hamle Geçmişi</h2>
-        <ul id="history"></ul>
-      </section>
+        <section class="card">
+          <h2>Sayı Seç</h2>
+          <div id="numbers" class="grid grid-4"></div>
+        </section>
 
-      <section class="actions">
-        <button id="undoBtn">Geri Al</button>
-        <button id="resetBtn">Sıfırla</button>
-      </section>
+        <section class="card">
+          <h2>Kural</h2>
+          <p id="ruleText">-</p>
+        </section>
 
-      <section class="card result" id="resultBox">
-        <h2 id="resultTitle">Durum</h2>
-        <p id="resultDesc"></p>
+        <section class="card log">
+          <h2>Hamle Geçmişi</h2>
+          <ul id="history"></ul>
+        </section>
+
+        <section class="actions">
+          <button id="undoBtn">Geri Al</button>
+          <button id="resetBtn">Sıfırla</button>
+        </section>
+
+        <section class="card result" id="resultBox">
+          <h2 id="resultTitle">Durum</h2>
+          <p id="resultDesc"></p>
+        </section>
       </section>
     </div>
 
-    <script src="./app.js"></script>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
